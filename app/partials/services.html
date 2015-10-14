@@ -1,0 +1,48 @@
+
+
+<!-- <input type="text" ng-model="nameFilter" placeholder="Search..."/>
+<label for="search">items per page:</label>
+<input type="number" min="1" max="100" class="form-control" ng-model="pageSize"> -->
+<div class="row">
+	<div class="col-xs-4">
+		<label for="search" class="label-text" >Search:</label>
+		<input ng-model="nameFilter" id="search" class="form-control" placeholder="Search...">
+	</div>
+	<div class="col-xs-4">
+		<label for="search" class="label-text" >Items per page:</label>
+		<input type="number" min="1" max="10" class="form-control" ng-model="servicesPerPage" placeholder="10">
+	</div>
+</div><br>
+<img ng-src="images/loading.gif" ng-show="loading" class="ajax-loader">
+	<table class="table table-striped table-bordered  box list-table">
+		<thead>
+			<tr>
+				<th ng-click="changeSorting('name')">Service Name</th>
+				<th ng-click="changeSorting('id')">Service ID</th>
+				<th ng-click="changeSorting('incidentDetails.incident_count')">Incidents</th>
+				<th ng-click="changeSorting('incidentDetails.mean_ttr')">Mean TTR (seconds)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!--<tr ng-repeat="service in services | filter: searchFilter | orderBy:sort.column:sort.descending " row-id="{{ service.id }}" >-->
+			<tr dir-paginate="service in services | filter: searchFilter | orderBy:sort.column:sort.descending |  itemsPerPage: servicesPerPage" 
+			    total-items="totalServices">
+			  <td>{{service.name}}</td>        
+				<td>{{service.id}}</td>
+				<td>
+					<a href="#/services/{{service.id}}/incidents">
+						{{service.incidentDetails.incident_count}} incidents, click for details
+					</a>
+				</td>
+				
+				<td>{{service.incidentDetails.mean_ttr}}</td>
+				
+	  	</tr>
+		</tbody>
+	</table>
+	<!-- <div ng-controller="pagingController" class="other-controller"> -->
+		<div class="text-center">
+		<dir-pagination-controls boundary-links="true" on-page-change="pageChanged(newPageNumber)" 
+		template-url="../app/tpl/dirPagination.tpl.html"></dir-pagination-controls>
+ <!-- </div>	 -->
+

@@ -1,0 +1,25 @@
+
+<a href="./#/services"><font color="white">Go Back to the Services List</font></a><br>
+<img ng-src="images/loading.gif" ng-show="loading" class="ajax-loader">
+<scrollable-table watch="services">
+	<table class="table table-striped table-bordered  box list-table">
+		<thead>
+			<tr>
+				<th ng-click="changeSorting('id')">Incident ID</th> 
+				<th ng-click="changeSorting('trigger_summary_data.description')">Subject\Description</th>
+				<th ng-click="changeSorting('created_on')">Time Occurred</th>
+				<th ng-click="changeSorting('resolved_on')">Time Resolved</th>
+				<th ng-click="changeSorting('time_to_resolve')">TTR (sec)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="incident in incidents.incidents | filter: searchFilter  | orderBy:sort.column:sort.descending " >
+				<td>{{incident.id}}</td>
+				<td>{{incident.trigger_summary_data.description || incident.trigger_summary_data.subject}}</td>
+				<td>{{incident.created_on}}</td>
+				<td>{{incident.resolved_on}}</td>
+				<td>{{incident.time_to_resolve}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</scrollable-table>

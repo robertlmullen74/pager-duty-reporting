@@ -1,0 +1,146 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.scrollableContainer {
+    height: 700px;
+    position: relative;
+    padding-top: 0px;
+    margin-bottom: 30px;
+}
+.scrollableContainer .headerSpacer {
+    border: 1px solid #d5d5d5;
+    border-bottom-color: #bbb;
+    position: absolute;
+    height: 0px;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.scrollableContainer th .th-inner .title > span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.scrollableContainer th .orderWrapper {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    cursor: pointer;
+}
+.scrollArea {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid #d5d5d5;
+}
+.scrollArea table {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 0;
+    border: none;
+    border-collapse: separate;
+}
+.scrollArea table th {
+    padding: 0;
+    border: none;
+}
+.scrollArea table .th-inner {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 8px;
+    border-left: 1px solid #ddd;
+}
+.scrollArea table tr th:first-child .th-inner {
+    border-left: none;
+}
+.scrollArea table .th-inner.condensed {
+    padding: 0 3px;
+}
+.scrollArea table tbody tr td:first-child {
+    border-left: none;
+}
+.scrollArea table tbody tr td:last-child {
+    border-right: none;
+}
+.scrollArea table tbody tr:first-child td {
+    border-top: none;
+}
+.scrollArea table tbody tr:last-child td {
+    border-bottom: 1px solid #ddd;
+}
+
+table .cr {
+    min-width: 30px;    
+}
+
+.ajax-loader {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    margin-left: -40px; /* -1 * image width / 2 */
+    margin-top: -40px;  /* -1 * image height / 2 */
+    display: block;  
+}
+/* Styles go here */
+
+.my-controller {
+  border: 1px solid #fcc;
+  padding: 5px;
+  margin: 3px;
+}
+.my-controller small {
+  color: #c99;
+}
+.other-controller {
+  border: 0px solid #d3d3d3;
+  padding: 0px;
+  margin: 0px;
+}
+.other-controller small {
+  color: #99c;
+}
+.third-controller {
+  border: 1px solid #cfc;
+  padding: 5px;
+  margin: 3px;
+}
+.third-controller small {
+  color: #9c9;
+}
+
+.label-text{
+	color: #ffffff;
+}

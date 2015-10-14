@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.0.0-alpha-5
+3 info using node@v0.10.30
+4 verbose node symlink /usr/local/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/robm/Stash/mullr4/pager-duty/api',
+6 verbose install   [ 'express',
+6 verbose install     'body-parser',
+6 verbose install     'async',
+6 verbose install     'cors',
+6 verbose install     'request',
+6 verbose install     'supertest' ] ]
+7 info preinstall pd-api@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping async@* /Users/robm/Stash/mullr4/pager-duty/api
+10 verbose already installed skipping cors@* /Users/robm/Stash/mullr4/pager-duty/api
+11 verbose already installed skipping request@~2.0.0 /Users/robm/Stash/mullr4/pager-duty/api
+12 verbose cache add [ 'supertest@x', null ]
+13 verbose cache add spec="supertest@x" args=["supertest@x",null]
+14 verbose already installed skipping express@~4.0.0 /Users/robm/Stash/mullr4/pager-duty/api
+15 verbose already installed skipping body-parser@~1.0.0 /Users/robm/Stash/mullr4/pager-duty/api
+16 verbose parsed spec { raw: 'supertest@x',
+16 verbose parsed spec   scope: null,
+16 verbose parsed spec   name: 'supertest',
+16 verbose parsed spec   rawSpec: 'x',
+16 verbose parsed spec   spec: '*',
+16 verbose parsed spec   type: 'range' }
+17 verbose addNamed [ 'supertest', '*' ]
+18 verbose addNamed [ null, '*' ]
+19 silly lockFile 3f72b6b7-supertest supertest@*
+20 verbose lock supertest@* /Users/robm/.npm/3f72b6b7-supertest.lock
+21 silly addNameRange { name: 'supertest', range: '*', hasData: false }
+22 verbose mapToRegistry name supertest
+23 verbose mapToRegistry uri http://npm-registry.prv-openclass.com/supertest
+24 verbose request where is /supertest
+25 verbose request registry http://npm-registry.prv-openclass.com/
+26 verbose request id 51d715a3eff2c5cd
+27 verbose request url raw /supertest
+28 verbose request url resolving [ 'http://npm-registry.prv-openclass.com/', './supertest' ]
+29 verbose request url resolved http://npm-registry.prv-openclass.com/supertest
+30 verbose request where is http://npm-registry.prv-openclass.com/supertest
+31 verbose request no basic auth needed
+32 info trying registry request attempt 1 at 11:42:07
+33 http GET http://npm-registry.prv-openclass.com/supertest
+34 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+35 info trying registry request attempt 2 at 11:43:32
+36 http GET http://npm-registry.prv-openclass.com/supertest
+37 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+38 info trying registry request attempt 3 at 11:46:28
+39 http GET http://npm-registry.prv-openclass.com/supertest
+40 silly lockFile 3f72b6b7-supertest supertest@*
+41 silly lockFile 3f72b6b7-supertest supertest@*
+42 error network connect ETIMEDOUT
+42 error network This is most likely not a problem with npm itself
+42 error network and is related to network connectivity.
+42 error network In most cases you are behind a proxy or have bad network settings.
+42 error network
+42 error network If you are behind a proxy, please make sure that the
+42 error network 'proxy' config is set properly.  See: 'npm help config'
+43 error System Darwin 11.4.2
+44 error command "node" "/usr/local/bin/npm" "install"
+45 error cwd /Users/robm/Stash/mullr4/pager-duty/api
+46 error node -v v0.10.30
+47 error npm -v 2.0.0-alpha-5
+48 error syscall connect
+49 error code ETIMEDOUT
+50 error errno ETIMEDOUT
+51 verbose exit [ 1, true ]

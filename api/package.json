@@ -1,0 +1,13 @@
+{
+	"name": "pd-api",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "~4.0.0",
+		"body-parser": "~1.0.0",
+		"async":"*",
+		"cors":"*",
+		"request":"~2.0.0",
+		"supertest":"x"
+	}
+}
